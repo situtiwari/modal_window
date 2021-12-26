@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="main">This is a Modal window💕</h1>
+    <div class="modal hidden">
+    <p class="cut">&times</p>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore modi ut quisquam
+        placeat quasi autem impedit maiores rerum libero, laboriosam possimus. Voluptate facere eligendi ipsam
+        harum assumenda? Nisi sunt voluptate officia provident iste necessitatibus id maiores error possimus explicabo
+        autem, dolor cumque earum? Aliquam ut ipsum tempora sed suscipit.</p>
+        <button class="close">close from here</button>
+    </div>
+</body>
+
+<style>
+    body {
+
+        width: 100%;
+        background-image: conic-gradient(rgb(140, 66, 158), #BC70A4, #BFD641, rgb(113, 139, 196), green);
+        
+    }
+
+    h1 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        background-color: linear-gradient(rgb(102, 183, 185),rgb(179, 97, 154),rgb(77, 158, 77));
+        padding: 6rem;
+        border-radius: 5px;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        z-index: 20;
+    }
+    .cut{
+       
+        cursor: pointer;
+        font-size: 25px;
+    }
+    .close{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 15px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 42%;
+        cursor: pointer;
+        border-radius: 4px;
+        background-image: linear-gradient(rgb(180, 57, 174),rgb(75, 75, 148),rgb(58, 136, 141));
+    }
+</style>
+<script>
+    const main = document.querySelector('.main');
+    const modal = document.querySelector('.modal');
+    const clos = document.querySelector('.close');
+    const cut = document.querySelector('.cut');
+    main.addEventListener('click', function () {
+        console.log("clicked")
+        modal.classList.remove('hidden')
+    });
+
+    clos.addEventListener('click', function () {
+        console.log("again clicked")
+        modal.classList.add('hidden')
+    });
+
+    cut.addEventListener('click', function () {
+        console.log("again clicked")
+        modal.classList.add('hidden')
+    });
+
+</script>
+
+</html>
